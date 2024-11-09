@@ -1,21 +1,20 @@
 html {
     height: 100%;
 }
+
 body {
     height: calc(100vh - 164px);
     font-family: 'Raleway', sans-serif;
 }
 
-
-/* -------------------------------- Media Queries */
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
-      max-width: 80%;
+        max-width: 80%;
     }
 }
-  
-/* fixed top navbar only on medium and up */
+
+/* Fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -27,4 +26,36 @@ body {
     .header-container {
         padding-top: 164px;
     }
+}
+
+/* Center the navigation items on desktop screens */
+@media (min-width: 992px) {
+    .navbar-nav {
+        justify-content: center;
+    }
+}
+
+/* Black styling for logo, icons, and navbar links */
+.main-logo-link h2,
+.navbar-nav .nav-link,
+.navbar-toggler-icon,
+.icon, 
+.fa-user, 
+.fa-shopping-bag, 
+.fa-search {
+    color: black !important;
+}
+
+/* Optional: "Shop Now" button styling */
+.button-shop-now {
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    font-weight: bold;
+    padding: 8px 16px;
+}
+
+.button-shop-now:hover {
+    background-color: black;
+    color: white;
 }
