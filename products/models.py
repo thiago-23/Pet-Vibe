@@ -4,6 +4,11 @@ from django.contrib.auth.models import User
 
 class Category(models.Model):
     """Model for Category"""
+
+    class Meta:
+        """Set verbose name"""
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
