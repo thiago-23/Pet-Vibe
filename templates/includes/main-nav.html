@@ -5,12 +5,12 @@
                 ALL Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">Toys</a>
-                <a href="" class="dropdown-item ">Food</a>
-                <a href="" class="dropdown-item">Beds</a>
-                <a href="" class="dropdown-item">Treats</a>
+                <a href="{% url 'products' %}?category=toys" class="dropdown-item">Toys</a>
+                <a href="{% url 'products' %}?category=food" class="dropdown-item ">Foods</a>
+                <a href="{% url 'products' %}?category=beds" class="dropdown-item">Beds</a>
+                <a href="{% url 'products' %}?category=treats" class="dropdown-item">Treats</a>
                 <a href="" class="dropdown-item">Groomming</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}?category=toys,food,beds,treats" class="dropdown-item">All Products</a>
             </div>
         </li>
         
