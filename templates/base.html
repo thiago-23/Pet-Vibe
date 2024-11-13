@@ -100,15 +100,23 @@
             </div>
         </div>
         
-        <nav class="navbar navbar-expand-lg navbar-light bg-white w-100">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            {% include 'includes/mobile-top-header.html' %}
-            <div class="collapse navbar-collapse" id="main-nav">
-                {% include 'includes/main-nav.html' %}
-            </div>
-        </nav>
+        <div class="row bg-white">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white w-100">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                {% include 'includes/mobile-top-header.html' %}
+                <div class="collapse navbar-collapse" id="main-nav">
+                    {% include 'includes/main-nav.html' %}
+                </div>
+            </nav>
+        </div>
+
+        <div id="delivery-banner" class="row text-center"></div>
+            <div class="col">
+                <h4 class="my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>                
+            </div>            
+        </div>
         
     </header>
 
