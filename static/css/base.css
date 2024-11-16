@@ -26,6 +26,20 @@ body {
     color: white
 }
 
+/* Product Detail */
+
+.product-detail-image {
+    width: 100%;
+    height: 40vw;
+    object-fit: cover;
+    min-height: 400px
+}
+
+.product-description {
+    background-color: #F5F6F4;
+    height: 15vw;
+}
+
 /* Back to top button */
 
 .btt-button {
@@ -51,6 +65,12 @@ body {
 }
 .toast-capper {
     height: 2px;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 

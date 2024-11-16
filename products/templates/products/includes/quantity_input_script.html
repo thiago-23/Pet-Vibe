@@ -11,13 +11,13 @@
 
     // Ensure proper enabling/disabling of all inputs on page load
     var allQtyInputs = $('.qty_input');
-    for(var i = 0; i < allQtyInputs.length; i++){
+    for (var i = 0; i < allQtyInputs.length; i++) {
         var itemId = $(allQtyInputs[i]).data('item_id');
         handleEnableDisable(itemId);
     }
 
     // Check enable/disable every time the input is changed
-    $('.qty_input').change(function() {
+    $('.qty_input').change(function () {
         var itemId = $(this).data('item_id');
         handleEnableDisable(itemId);
     });
@@ -31,7 +31,10 @@
        var updatedValue = parseInt($(closestInput).val());
        var itemId = $(this).data('item_id');
        handleEnableDisable(itemId);
-       updateBag(itemId, updatedValue);
+
+       if (window.location.toString().includes("bag")) {
+            updateBag(itemId, updatedValue);
+        }
     });
 
     // Decrease quantity
@@ -42,22 +45,25 @@
        $(closestInput).val(currentValue - 1);
        var updatedValue = parseInt($(closestInput).val())
        var itemId = $(this).data('item_id');
-       handleEnableDisable(itemId);
-       updateBag(itemId, updatedValue);
+       handleEnableDisable(itemId); 
+
+       if (window.location.toString().includes("bag")) {
+            updateBag(itemId, updatedValue);
+        }
     });
 
     // update bag automatically
     function updateBag(item_id, quantity) {
         var csrfToken = "{{ csrf_token }}";
-        $.post({ 
-            url: `/bag/adjust/${item_id}/`,
-            data: {
-                'quantity': quantity,
-                'csrfmiddlewaretoken': csrfToken
-            },
-            success: function() {
+        var url = `/bag/adjust/${item_id}/`
+        var data = {
+            'csrfmiddlewaretoken': csrfToken,
+            'quantity': quantity,
+        };
+
+        $.post(url, data)
+            .done(function () {
                 location.reload();
-            }
         });
     };
 </script>
