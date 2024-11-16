@@ -53,6 +53,21 @@ body {
     cursor: pointer;
 }
 
+/* bag */
+/* disable arrow buttons on number input Credit W3 Schools  */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Chrome, Safari, Edge */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 /* Messages */
 .message-container {
     position: fixed;
