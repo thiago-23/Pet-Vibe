@@ -35,7 +35,11 @@
                         {% for item in bag_items %}
                         <tr>
                             <td class="p-3 w-25">
+                                {% if item.product.image %}
                                 <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                                {% else %}
+                                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+                                {% endif %}
                             </td>
                             <td class="py-3">
                                 <p class="my-0"><strong>{{ item.product.name }}</strong></p>
@@ -128,6 +132,7 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
+
 <script>
     // update quantity on click
     // $('.update-link').click(function (e) {
