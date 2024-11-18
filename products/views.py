@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required, user_passes_test
+from django.contrib.auth.decorators import login_required, user_passes_test, PermissionDenied
 from django.db.models import Q
 from .models import Product, Category, User
 from django.db.models.functions import Lower
@@ -9,6 +9,10 @@ from .forms import ProductForm
 def superuser_check(user):
     """ checks if user if superuser """
     return user.is_superuser
+
+    if user.is_superuser:
+        return True
+    raise PermissionDenied
 
 
 def all_products(request):
@@ -74,7 +78,7 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 @login_required
-@user_passes_test(superuser_check, login_url='products')
+@user_passes_test(superuser_check)
 def add_product(request):
     """ Add a product to the store """
 
