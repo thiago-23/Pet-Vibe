@@ -31,7 +31,10 @@ SECRET_KEY = 'django-insecure-#3ya96um1#m-@zp=3#&&#1&k1cco-#b%l7tqx@w=4vw+5f#0cn
 DEBUG = True
 
 # ALLOWED_HOSTS = ['8000-thiago23-petvibe-f55we9hgp7f.ws.codeinstitute-ide.net']
-ALLOWED_HOSTS = ['pet-vibe-368356973856.herokuapp.com/','localhost']
+ALLOWED_HOSTS = [
+    'pet-vibe-368356973856.herokuapp.com',
+    'localhost',
+]
 
 
 # Application definition
