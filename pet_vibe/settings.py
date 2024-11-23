@@ -9,13 +9,14 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-from pathlib import Path
+
 import os
 import dj_database_url
+from pathlib import Path
 
-from os import path
-if path.exists("env.py"):
-    import env
+# from os import path
+# if path.exists("env.py"):
+#     import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,16 +26,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-os.environ.get('SECRET_KEY', '')
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
 # ALLOWED_HOSTS = ['8000-thiago23-petvibe-f55we9hgp7f.ws.codeinstitute-ide.net']
 ALLOWED_HOSTS = [
-    'pet-vibe-368356973856.herokuapp.com',
-    'localhost',
-]
+    'pet-vibe-368356973856.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -199,7 +198,7 @@ if 'USE_AWS' in os.environ:
     STATICFILES_LOCATION = 'static'
     DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
     MEDIAFILES_LOCATION = 'media'
-    
+
     # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
