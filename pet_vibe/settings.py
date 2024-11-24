@@ -33,7 +33,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 # ALLOWED_HOSTS = ['8000-thiago23-petvibe-f55we9hgp7f.ws.codeinstitute-ide.net']
 ALLOWED_HOSTS = [
-    'pet-vibe-368356973856.herokuapp.com', 'localhost']
+    'pet-vibe-368356973856.herokuapp.com', 'localhost', '8000-thiago23-petvibe-f55we9hgp7f.ws.codeinstitute-ide.net']
 
 
 # Application definition
