@@ -28,6 +28,7 @@ body {
     right: 15px;
     text-align: right;
 }
+
 .like-btn a {
     color: white
 }
@@ -59,6 +60,7 @@ body {
     bottom: 10px;
     right: 10px;
 }
+
 .btt-link {
     cursor: pointer;
 }
@@ -68,6 +70,7 @@ body {
     position: relative;
     overflow: hidden;
 }
+
 .btn-file input[type="file"] {
     position: absolute;
     top: 0;
@@ -77,10 +80,12 @@ body {
     opacity: 0;
     cursor: pointer;
 }
+
 .custom-checkbox .custom-control-label::before {
     border-radius: 0;
     border-color: #dc3545;
 }
+
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #dc3545;
     border-color: #dc3545;
@@ -107,16 +112,20 @@ input::-webkit-inner-spin-button {
     margin-top: 1.5rem; /* mt-4 */
     color: #6c757d; /* text-secondary */
 }
+
 .allauth-form-inner-content input {
     border-color: #000;
     border-radius: 0;
 }
+
 .allauth-form-inner-content label:not([for='id_remember']) {
     display: none;
 }
+
 .allauth-form-inner-content input::placeholder {
     color: #aab7c4;
 }
+
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
 	/* btn */
@@ -138,12 +147,14 @@ input::-webkit-inner-spin-button {
     /* standard bootstrap btn transitions */
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
 	color: #fff;
     background-color: #222;
     border-color: #222;
 }
+
 .allauth-form-inner-content a {
 	color: #17a2b8; /* text-info */
 }
@@ -155,9 +166,11 @@ input::-webkit-inner-spin-button {
     right: 15px;
     z-index: 99999999999;
 }
+
 .custom-toast {
     overflow: visible;
 }
+
 .toast-capper {
     height: 2px;
 }
@@ -193,41 +206,6 @@ input::-webkit-inner-spin-button {
     }
 }
 
-/* Center the navigation items on desktop screens */
-@media (min-width: 992px) {
-    .navbar-nav {
-        justify-content: center;
-    }
-    .navbar-nav {
-        display: contents;
-    }
-}
-
-/* Black styling for logo, icons, and navbar links */
-.main-logo-link h2,
-.navbar-nav .nav-link,
-.navbar-toggler-icon,
-.icon, 
-.fa-user, 
-.fa-shopping-bag, 
-.fa-search {
-    color: black !important;
-}
-
-/*"Shop Now" button styling */
-.button-shop-now {
-    background-color: transparent;
-    border: 1px solid black;
-    color: black;
-    font-weight: bold;
-    padding: 8px 16px;
-}
-
-.button-shop-now:hover {
-    background-color: black;
-    color: white;
-}
-
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
@@ -237,4 +215,36 @@ input::-webkit-inner-spin-button {
     body {
         height: calc(100vh - 116px);
     }
+
+    nav-link {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    #delivery-banner h4 {
+        font-size: .9rem;
+    }
+
+    .btn.btn-outline-black.rounded-0,
+    .btn.btn-black.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
+    .btn.btn-outline-black.rounded-0.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
+     /* .increase-qty, .decrease-qty {
+        padding: .25rem .5rem !important;
+    } */
 }
