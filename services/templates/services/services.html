@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-7 col-md-6 my-auto">
+                <h1 class="display-4 logo-font text-black">
+                    Services Page
+                </h1>
+            </div>
+        </div>
+
+        <div>
+            {% for service in object_list %}
+            <h2>{{ service.name }}</h2>
+            <p>{{ service.description }}</p>
+            {% for size in service.sizes.all %}
+            <p>{{ size.size }} - ${{ size.price }} - {{ size.duration }}</p>
+            {% endfor %}
+            {% endfor %}
+        </div>
+        
+    </div>
+{% endblock %}
+        
+    
