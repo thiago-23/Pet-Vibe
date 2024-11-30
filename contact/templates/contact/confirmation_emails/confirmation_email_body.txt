@@ -4,7 +4,7 @@ Thank you for reaching out to us at Pet Vibe! We have received your enquiry and 
 
 Here are the details of your enquiry:
 
-{{ suject}}
+{{ message }}
 
 If you have any further questions or updates, please feel free to contact us again.
 
