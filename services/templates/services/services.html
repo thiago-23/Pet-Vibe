@@ -10,26 +10,58 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-black">
-                    Services Page
-                </h1>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center pt-4">Grooming Services</h1>
+        </div>
+    </div>
+
+    <!-- Display Add Service Button for Admins -->
+    {% if user.is_authenticated and user.is_superuser %}
+    <div class="row my-3">
+        <div class="col-12 text-center">
+            <a href="{% url 'add_service' %}" class="btn btn-outline-success">
+                Add New Service
+            </a>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- List of Services -->
+    <div class="row">
+        {% for service in object_list %}
+        <div class="col-12 col-md-6 mb-4">
+            <div class="card h-100">
+                {% if service.image %}
+                <img src="{{ service.image.url }}" class="card-img-top" alt="{{ service.name }}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ service.name }}</h5>
+                    <p class="card-text">{{ service.description }}</p>
+                    <ul class="list-unstyled">
+                        {% for size in service.sizes.all %}
+                        <li>
+                            <strong>{{ size.size }}</strong>: ${{ size.price }} 
+                            - Duration: {{ size.duration }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <!-- Admin Controls -->
+                {% if user.is_authenticated and user.is_superuser %}
+                <div class="card-footer text-center">
+                    <a href="{% url 'edit_service' service.id %}" class="btn btn-outline-primary btn-sm">
+                        Edit
+                    </a>
+                    <a href="{% url 'delete_service' service.id %}" class="btn btn-outline-danger btn-sm">
+                        Delete
+                    </a>
+                </div>
+                {% endif %}
             </div>
         </div>
-
-        <div>
-            {% for service in object_list %}
-            <h2>{{ service.name }}</h2>
-            <p>{{ service.description }}</p>
-            {% for size in service.sizes.all %}
-            <p>{{ size.size }} - ${{ size.price }} - {{ size.duration }}</p>
-            {% endfor %}
-            {% endfor %}
-        </div>
-        
+        {% endfor %}
     </div>
+</div>
 {% endblock %}
-        
-    
