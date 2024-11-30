@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}Pet Vibe | Add Testimonial{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="container mt-5">
+    <h1 class="text-center">Add Your Testimonial</h1>
+    <div class="row justify-content-center mt-4">
+        <div class="col-12 col-md-8 col-lg-6">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn gold-button">Submit Testimonial</button>
+                <a href="{% url 'testimonials' %}" class="btn btn-outline-secondary ml-3">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}Pet Vibe | Testimonials{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="container mt-5">
+    <h1 class="text-center">Customer Testimonials</h1>
+    <div class="text-center mt-3">
+        <a href="{% url 'add_testimonial' %}" class="btn gold-button">Add Testimonial</a>
+    </div>
+    <div class="row mt-5">
+        {% for testimonial in testimonials %}
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card testimonial-bg">
+                <div class="card-body">
+                    <blockquote>
+                        "{{ testimonial.body|truncatechars:200 }}"
+                    </blockquote>
+                    <footer class="blockquote-footer">
+                        {{ testimonial.name }} for <cite>{{ testimonial.service.name }}</cite>
+                    </footer>
+                </div>
+                {% if user.email == testimonial.email or user.is_superuser %}
+                <div class="card-footer">
+                    <a href="{% url 'edit_testimonial' testimonial.id %}" class="text-gold">Edit</a> |
+                    <a href="{% url 'delete_testimonial' testimonial.id %}" class="text-gold">Delete</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

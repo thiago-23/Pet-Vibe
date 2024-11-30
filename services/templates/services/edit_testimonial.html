@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_title %}Pet Vibe | Edit Service{% endblock %}
+{% block extra_title %}Pet Vibe | Edit Testimonial{% endblock %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -14,17 +14,15 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<div class="container">
-    <h1 class="text-center">Edit Service</h1>
-    <hr>
-    <br>
+<div class="container mt-5">
+    <h1 class="text-center">Edit Testimonial</h1>
     <div class="row justify-content-center mt-4">
-        <div class="col-11 col-md-8 col-lg-6 mt-3 add-recipe-outer">
-            <form method="post" enctype="multipart/form-data">
+        <div class="col-12 col-md-8 col-lg-6">
+            <form method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <button type="submit" class="btn gold-button">Save Changes</button>
-                <a class="btn btn btn-outline-dark m-2" href="{%  url 'services' %}">Cancel</a>
+                <a href="{% url 'testimonials' %}" class="btn btn-outline-secondary ml-3">Cancel</a>
             </form>
         </div>
     </div>

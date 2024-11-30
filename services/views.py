@@ -4,7 +4,7 @@ from django.urls import reverse_lazy
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import GroomingService, Testimonial
-from .forms import GroomingServiceForm
+from .forms import GroomingServiceForm, TestimonialForm, TestimonialUpdateForm
 from django.views import generic
 from django.shortcuts import redirect
 
@@ -65,3 +65,62 @@ class DeleteServiceView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, "Service deleted successfully.")
         return super().delete(request, *args, **kwarg)
+
+class TestimonialListView(ListView):
+    """
+    Displays approved testimonials.
+    """
+    model = Testimonial
+    template_name = 'services/testimonials.html'
+    context_object_name = 'testimonials'
+
+    def get_queryset(self):
+        return Testimonial.objects.filter(is_approved=True)
+
+
+class AddTestimonialView(LoginRequiredMixin, CreateView):
+    """
+    Allows users to add testimonials.
+    """
+    model = Testimonial
+    form_class = TestimonialForm
+    template_name = 'services/add_testimonial.html'
+    success_url = reverse_lazy('testimonials')
+
+    def form_valid(self, form):
+        messages.success(self.request, "Your testimonial has been submitted for approval.")
+        return super().form_valid(form)
+
+
+class EditTestimonialView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    """
+    Allows users to edit their testimonials.
+    """
+    model = Testimonial
+    form_class = TestimonialUpdateForm
+    template_name = 'services/edit_testimonial.html'
+
+    def test_func(self):
+        testimonial = self.get_object()
+        return self.request.user.email == testimonial.email
+
+    def form_valid(self, form):
+        messages.success(self.request, "Your testimonial has been updated.")
+        return super().form_valid(form)
+
+
+class DeleteTestimonialView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    """
+    Allows users to delete their testimonials.
+    """
+    model = Testimonial
+    template_name = 'services/delete_testimonial.html'
+    success_url = reverse_lazy('testimonials')
+
+    def test_func(self):
+        testimonial = self.get_object()
+        return self.request.user.email == testimonial.email
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, "Your testimonial has been deleted.")
+        return super().delete(request, *args, **kwargs)
