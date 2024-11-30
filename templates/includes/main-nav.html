@@ -14,18 +14,18 @@
                 <a href="{% url 'products' %}?category=food" class="dropdown-item ">Foods</a>
                 <a href="{% url 'products' %}?category=beds" class="dropdown-item">Beds</a>
                 <a href="{% url 'products' %}?category=treats" class="dropdown-item">Treats</a>
-                <a href="" class="dropdown-item">Groomming</a>
+                <a href="{% url 'services' %}" class="dropdown-item">Groomming</a>
                 <a href="{% url 'products' %}?category=toys,food,beds,treats" class="dropdown-item">All Products</a>
             </div>
         </li>
         
         <li class="nav-item">
-            <a class="font-weight-bold nav-link" href="#"id="groomming-link">
+            <a class="font-weight-bold nav-link" href="{% url 'services' %}"id="groomming-link">
                 Grooming
             </a>
         </li>
         <li class="nav-item">
-            <a class="font-weight-bold nav-link" href="#"id="testtimonials-link">
+            <a class="font-weight-bold nav-link" href="{% url 'testimonials' %}"id="testtimonials-link">
                 Testimonials
             </a>
         </li>
