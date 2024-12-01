@@ -14,6 +14,8 @@ body {
     font-weight: 300!important;
     letter-spacing: 2px;
     text-transform: uppercase;
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .gold-button:hover {
@@ -57,19 +59,35 @@ body {
     color: white;
 }
 
-/* Buttons */
-.gold-button {
-    background: #A99166;
-    color: black;
-    font-weight: 300 !important;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    padding: 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+/* Logo Link */
+.main-logo-link {
+    color: #A99166 !important;
+    font-weight: bold;
 }
 
-.gold-button:hover {
+.main-logo-link:hover {
+    color: #85643F;
+}
+
+/* Search Bar */
+.input-group .form-control {
+    border: 2px solid #A99166;
+}
+
+.input-group .form-control:focus {
+    box-shadow: 0 0 5px #A99166;
+    border-color: #A99166;
+}
+
+.input-group .btn {
+    border: 2px solid #A99166;
+    background-color: #A99166;
     color: white;
+}
+
+/* Borders */
+.border-gold {
+    border: 2px solid #A99166 !important;
 }
 
 /* Text Colors */
@@ -79,11 +97,6 @@ body {
 
 .text-jet {
     color: #4D4E54 !important;
-}
-
-/* Borders */
-.border-gold {
-    border: 2px solid #A99166 !important;
 }
 
 /* Home Page */
@@ -106,7 +119,7 @@ body {
     background-position: center;
     background-size: cover;
     min-height: 900px;
-    border: 2px solid #A99166;
+    border: none !important; 
 }
 
 .mobile-image-container img {
@@ -130,9 +143,7 @@ body {
     background-position: center;
     background-size: cover;
     min-height: 800px;
-    border-top: 2px solid #A99166;
-    border-bottom: 2px solid #A99166;
-    border-left: 2px solid #A99166;
+    border: none;
 }
 
 /* Product Cards */
@@ -161,7 +172,6 @@ body {
 }
 
 /* Product Detail */
-
 .product-detail-image {
     width: 100%;
     height: 40vw;
@@ -175,13 +185,14 @@ body {
 }
 
 /* Back to top button */
-
 .btt-button {
     height: 42px;
     width: 42px;
     position: fixed;
     bottom: 10px;
     right: 10px;
+    background-color: white;
+    border: 2px solid #A99166
 }
 
 .btt-link {
@@ -236,7 +247,7 @@ input::-webkit-inner-spin-button {
 }
 
 .allauth-form-inner-content input {
-    border-color: #000;
+    border-color: #A99166;
     border-radius: 0;
 }
 
@@ -274,7 +285,6 @@ input::-webkit-inner-spin-button {
 .allauth-form-inner-content input[type='submit']:hover {	
 	color: #fff;
     background-color: #222;
-    border-color: #222;
 }
 
 
@@ -360,10 +370,6 @@ input::-webkit-inner-spin-button {
     
     .navbar-nav .nav-item {
         margin-bottom: 10px; /* Add spacing for stacked items */
-    }
-
-    #delivery-banner h4 {
-        font-size: .9rem;
     }
 
     .btn.btn-outline-black.rounded-0,
