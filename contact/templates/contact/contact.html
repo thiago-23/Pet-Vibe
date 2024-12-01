@@ -12,15 +12,20 @@
 {% endblock %}
 
 {% block content %}
-<div class="container mt-5">
-    <h1 class="text-center">Contact Us</h1>
-    <p class="text-center">Feel free to reach out to us for any inquiries or questions!</p>
+<div class="container pb-5">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center pt-4">Contact Us</h1>
+            <p class="text-center text-muted">Feel free to reach out to us for any inquiries or questions!</p>
+        </div>
+    </div>
     <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-6">
+        <div class="col-11 col-md-8 col-lg-6 mt-3 contact-form-container">
             <form method="post">
                 {% csrf_token %}
                 {{ contact_form | crispy }}
-                <button type="submit" class="btn btn-primary btn-block mt-3">Send Message</button>
+                <button type="submit" class="btn btn-outline-dark border-gold rounded-0 mt-3">Send Message</button>
+                <a class="btn btn-outline-dark border-gold rounded-0 mt-3 ml-2" href="{% url 'home' %}">Cancel</a>
             </form>
         </div>
     </div>
