@@ -8,6 +8,7 @@ body {
     color: #313135;
 }
 
+/* Buttons */
 .gold-button {
     background: #aa9060;
     color: black;
@@ -99,6 +100,7 @@ body {
     color: #4D4E54 !important;
 }
 
+
 /* Home Page */
 .home-gold-border {
     border: 2px solid #A99166;
@@ -108,6 +110,7 @@ body {
     font-size: 4rem;
     line-height: 100px;
     font-weight: 400;
+    color: #A99166;
 }
 
 .background-image {
@@ -164,7 +167,7 @@ body {
 }
 
 .like-btn a {
-    color: white
+    color: white;
 }
 
 .edit-delete-btns {
@@ -176,7 +179,7 @@ body {
     width: 100%;
     height: 40vw;
     object-fit: cover;
-    min-height: 400px
+    min-height: 400px;
 }
 
 .product-description {
@@ -192,7 +195,7 @@ body {
     bottom: 10px;
     right: 10px;
     background-color: white;
-    border: 2px solid #A99166
+    border: 2px solid #A99166;
 }
 
 .btt-link {
@@ -278,7 +281,7 @@ input::-webkit-inner-spin-button {
     line-height: 1.5;
     border-radius: 0;
     /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
