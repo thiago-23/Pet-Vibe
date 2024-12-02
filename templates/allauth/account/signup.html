@@ -2,6 +2,8 @@
 
 {% load i18n %}
 
+{% block extra_title %}Pet Vibe | Sign Up {% endblock %}
+
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block inner_content %}
@@ -17,7 +19,7 @@
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
-  <a class="btn btn-outline-black rounded-0" href="{% url 'account_login' %}">Back to Login</a>
+  <a class="btn btn-outline-dark border-gold rounded-0" href="{% url 'account_login' %}">Back to Login</a>
   <button type="submit">{% trans "Sign Up" %}</button>
 </form>
 

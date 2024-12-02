@@ -2,13 +2,13 @@
 
 {% load i18n %}
 
+{% block extra_title %}Pet Vibe | Sign Out {% endblock %}
+
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
 {% block inner_content %}
-<hr>
-<h2 class="pt-4">{% trans "Sign Out" %}</h2>
-<hr>
-
+<h1 class="pt-4">{% trans "Sign Out" %}</h2>
+<br>
 <p>{% trans 'Are you sure you want to sign out?' %}</p>
 
 <form method="post" action="{% url 'account_logout' %}">
@@ -19,6 +19,5 @@
   <a class="btn btn-outline-dark border-gold rounded-0 m-2" href="{% url 'home' %}">Cancel</a>
   <button type="submit">{% trans 'Sign Out' %}</button>
 </form>
-
 
 {% endblock %}
