@@ -72,6 +72,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# CSRF Trusted Origins
+CSRF_TRUSTED_ORIGINS = [
+    'https://pet-vibe-368356973856.herokuapp.com'
+]
+
+
 ROOT_URLCONF = 'pet_vibe.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
