@@ -137,6 +137,16 @@ def delete_product(request, product_id):
     """ Delete a product from the store """
 
     product = get_object_or_404(Product, pk=product_id)
-    product.delete()
-    messages.success(request, 'Product Deleted!')
-    return redirect(reverse('products'))
+
+    if request.method == "POST":
+        product.delete()
+        messages.success(request, 'Product deleted successfully!')
+        return redirect(reverse('products'))
+
+    # Render the delete confirmation template
+    template = 'products/delete_product.html'
+    context = {
+        'product': product,
+    }
+
+    return render(request, template, context)
