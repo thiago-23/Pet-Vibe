@@ -14,32 +14,32 @@
 .StripeElement--focus,
 .stripe-style-input:focus,
 .stripe-style-input:active {
-   box-shadow: 0 1px 3px 0 #cfd7df;
+  box-shadow: 0 1px 3px 0 #cfd7df;
 }
 
 .StripeElement--webkit-autofill {
-   background-color: #fefde5 !important;
+  background-color: #fefde5 !important;
 }
 
 .stripe-style-input::placeholder {
-    color: #aab7c4;
+  color: #aab7c4;
 }
 
 .fieldset-label {
-    position: relative;
-    right: .5rem;
+  position: relative;
+  right: .5rem;
 }
 
 #payment-form .form-control,
 #card-element {
-    color: #000;
-    border: 1px solid #000;
+  color: #000;
+  border: 1px solid #000;
 }
 
 /* Country select field on order form  */
 select,
 select option {
-   color: #000;
+  color: #000;
 }
 select:invalid,
 select option[value='']{
