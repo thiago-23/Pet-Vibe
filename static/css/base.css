@@ -361,6 +361,12 @@ input::-webkit-inner-spin-button {
     .header-container {
         padding-top: 115px;
     }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+        padding-top: 5px;
+    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
