@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}Pet Vibe | Enquiry Details{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="container pb-5">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center pt-4">Enquiry Details</h1>
+            <p class="text-center text-muted">Detailed information about this enquiry.</p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-11 col-md-8 col-lg-6 mt-3">
+            <table class="table table-borderless">
+                <tr>
+                    <th>Name:</th>
+                    <td>{{ enquiry.name }}</td>
+                </tr>
+                <tr>
+                    <th>Email:</th>
+                    <td>{{ enquiry.email }}</td>
+                </tr>
+                <tr>
+                    <th>Enquiry Type:</th>
+                    <td>{{ enquiry.enquiry_type }}</td>
+                </tr>
+                <tr>
+                    <th>Message:</th>
+                    <td>{{ enquiry.message }}</td>
+                </tr>
+                <tr>
+                    <th>Date:</th>
+                    <td>{{ enquiry.date }}</td>
+                </tr>
+            </table>
+            <div class="text-center mt-3">
+                <a href="{% url 'enquiries_list' %}" class="btn btn-outline-dark border-gold rounded-0">Back to Enquiries</a>
+                <a href="{% url 'delete_enquiry' enquiry.pk %}" class="btn btn-outline-dark border-gold rounded-0">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
