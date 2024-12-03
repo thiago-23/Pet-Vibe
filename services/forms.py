@@ -10,6 +10,10 @@ class GroomingServiceForm(forms.ModelForm):
         model = GroomingService
         fields = '__all__'
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'border-gold'
 
 class TestimonialForm(forms.ModelForm):
     """
@@ -18,6 +22,11 @@ class TestimonialForm(forms.ModelForm):
     class Meta:
         model = Testimonial
         fields = '__all__'
+    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'border-gold'
 
 class TestimonialUpdateForm(forms.ModelForm):
     """
@@ -26,3 +35,8 @@ class TestimonialUpdateForm(forms.ModelForm):
     class Meta:
         model = Testimonial
         fields = ['body']
+    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'border-gold'
