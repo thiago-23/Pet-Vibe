@@ -8,6 +8,10 @@ body {
     color: #313135;
 }
 
+.content {
+    min-height: calc(100vh - 328px);
+}
+
 /* Buttons */
 .gold-button {
     background: #aa9060;
@@ -343,6 +347,7 @@ input::-webkit-inner-spin-button {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
 
 
 /* -------------------------------- Media Queries */

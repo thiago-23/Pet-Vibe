@@ -1,0 +1,53 @@
+{% load static %}
+<footer class="container-fluid footer-bg">
+    <div class="row py-lg-5 px-lg-5">
+        <!-- Navigation Links -->
+        <div class="col-12 col-md-4 px-4 px-md-0 py-4">
+            <ul class="nav flex-column px-4">
+                <li class="nav-item">
+                    <a href="{% url 'products' %}" class="nav-link footer-link text-uppercase">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'services' %}" class="nav-link footer-link text-uppercase">Pet Care Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'contact' %}" class="nav-link footer-link text-uppercase">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'testimonials' %}" class="nav-link footer-link text-uppercase">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" target="_blank" class="nav-link footer-link text-uppercase">Privacy Policy</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Social Media Section -->
+        <div class="col-12 col-md-4 p-4 text-center order-first">
+            <h5 class="footer-heading mb-4">Stay Connected</h5>
+            <ul class="list-inline social-icons">
+                <li class="list-inline-item">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer-social-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.instagram.com/" target="_blank" class="footer-social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://twitter.com/" target="_blank" class="footer-social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Contact Information -->
+        <div class="col-12 col-md-4 px-4 px-md-0 py-4">
+            <h5 class="footer-heading mb-4">Contact Us</h5>
+            <p class="footer-text">Email: <a href="mailto:support@petvibe.com" class="footer-link">support@petvibe.com</a></p>
+            <p class="footer-text">Phone: +353 (045) 123-4567</p>
+            <p class="footer-text">Address: 123 Pet Street, Pet City, PC 12345</p>
+        </div>
+    </div>
+</footer>
