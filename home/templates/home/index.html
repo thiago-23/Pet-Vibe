@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container h-md-100 background-image" aria-label="A Yorkshire Terrier enjoying a cozy environment">
+<div class="container h-md-100 background-image" role="img" aria-label="A Yorkshire Terrier enjoying a cozy environment">
     <div class="row mt-md-5 flex-md-row-reverse px-5 px-md-0">
         <div class="col-12 col-md-6 home-gold-border home-text-container pt-3 pt-md-5">
             <h1 class="logo-font pt-md-5 pl-2 px-md-5">
@@ -27,7 +27,7 @@
         <div class="col-12 col-md-6 home-image-container d-none d-md-flex" role="img" aria-label="A Yorkshire Terrier">
         </div>
         <div class="col-12 col-md-6 home-gold-border d-md-none mobile-image-container p-0">
-            <img class="img-fluid" src="/media/yorkshire.jpg" alt="Yorkshire Terrier">
+            <img class="img-fluid" src="{{ MEDIA_URL }}yorkshire.jpg" alt="Yorkshire Terrier">
         </div>
     </div>
 </div>
