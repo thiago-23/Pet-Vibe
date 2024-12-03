@@ -14,15 +14,23 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<div class="container mt-5">
-    <h1 class="text-center">Add Your Testimonial</h1>
-    <div class="row justify-content-center mt-4">
-        <div class="col-12 col-md-8 col-lg-6">
-            <form method="post">
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center pt-4">Add Your Testimonial</h1>
+            <p class="text-center text-muted">We value your feedback!</p>
+        </div>
+    </div>
+    <br>
+    <div class="row justify-content-center">
+        <div class="col-11 col-md-8 col-lg-6 mt-3 add-testimonial-outer">
+            <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="btn gold-button">Submit Testimonial</button>
-                <a href="{% url 'testimonials' %}" class="btn btn-outline-secondary ml-3">Cancel</a>
+                {{ form | crispy }}
+                <div class="text-center mt-3">
+                    <button type="submit" class="btn btn-outline-dark border-gold rounded-0">Submit Testimonial</button>
+                    <a class="btn btn-outline-dark border-gold rounded-0 m-2" href="{% url 'testimonials' %}">Cancel</a>
+                </div>
             </form>
         </div>
     </div>
