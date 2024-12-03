@@ -1,53 +1,81 @@
 {% load static %}
-<footer class="container-fluid footer-bg">
-    <div class="row py-lg-5 px-lg-5">
-        <!-- Navigation Links -->
+<footer class="container-fluid bg-footer">
+    <div class="row py-lg-3 px-lg-3">
         <div class="col-12 col-md-4 px-4 px-md-0 py-4">
-            <ul class="nav flex-column px-4">
+            <ul class="nav flex-column divider px-4">
                 <li class="nav-item">
-                    <a href="{% url 'products' %}" class="nav-link footer-link text-uppercase">Products</a>
+                    <a href="{% url 'products' %}" class="nav-link text-uppercase">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'services' %}" class="nav-link footer-link text-uppercase">Pet Care Services</a>
+                    <a href="{% url 'services' %}" class="nav-link text-uppercase">Pet Care Services</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'contact' %}" class="nav-link footer-link text-uppercase">Contact Us</a>
+                    <a href="{% url 'contact' %}" class="nav-link text-uppercase">Contact Us</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{% url 'testimonials' %}" class="nav-link footer-link text-uppercase">About Us</a>
+                    <a href="{% url 'testimonials' %}" class="nav-link text-uppercase">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" target="_blank" class="nav-link footer-link text-uppercase">Privacy Policy</a>
+                    <a href="https://www.termsfeed.com/live/05d8122c-1b3b-4744-bc55-8ce42f1486e4" 
+                        target="_blank" class="nav-link text-uppercase">Privacy Policy</a>
                 </li>
             </ul>
         </div>
-        <!-- Social Media Section -->
-        <div class="col-12 col-md-4 p-4 text-center order-first">
-            <h5 class="footer-heading mb-4">Stay Connected</h5>
-            <ul class="list-inline social-icons">
-                <li class="list-inline-item">
-                    <a href="https://www.facebook.com/" target="_blank" class="footer-social-link">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://www.instagram.com/" target="_blank" class="footer-social-link">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://twitter.com/" target="_blank" class="footer-social-link">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <!-- Contact Information -->
-        <div class="col-12 col-md-4 px-4 px-md-0 py-4">
-            <h5 class="footer-heading mb-4">Contact Us</h5>
+        <div class="col-12 col-md-4 p-4 text-center">
+            <h2 class="mb-4">Contact Us</h2>
             <p class="footer-text">Email: <a href="mailto:support@petvibe.com" class="footer-link">support@petvibe.com</a></p>
             <p class="footer-text">Phone: +353 (045) 123-4567</p>
             <p class="footer-text">Address: 123 Pet Street, Pet City, PC 12345</p>
+        </div>
+        <div class="col-12 col-md-4 p-4 order-first">
+            <div>
+                <h2 class="mb-4">Stay in touch!</h2>
+                <ul class="list-unstyled list-inline social-networks">
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                            aria-label="Visit our Facebook page (opens in new tab)"><i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                            aria-label="Visit our Instagram page (opens in new tab)"><i
+                                class="fab fa-instagram"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/" target="_blank" rel="noopener"
+                            aria-label="Visit our Twitter page (opens in new tab)"><i class="fab fa-twitter"></i></a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- Mailchimp Signup Form  -->
+            <div id="mc_embed_signup" class="bg-transparent">
+                <form 
+                    action="https://herokuapp.us13.list-manage.com/subscribe/post?u=98f3c90e1afa3f44433422985&amp;id=49d79fb80f&amp;f_id=007cc0e2f0" 
+                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate m-0" 
+                    target="_blank">
+                    <div id="mc_embed_signup_scroll">
+                        <p>Sign up to our monthly newsletter to keep up to date with all of our new stock!</p>
+                        <div class="mc-field-group">
+                            <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
+                            </label>
+                            <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required>
+                        </div>
+                        <div id="mce-responses" class="clear foot">
+                            <div class="response" id="mce-error-response" style="display: none;"></div>
+                            <div class="response" id="mce-success-response" style="display: none;"></div>
+                        </div>
+                        <!-- /* real people should not fill this in and expect good things - do not remove this or risk form bot signups */ -->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" 
+                            name="b_98f3c90e1afa3f44433422985_49d79fb80f" tabindex="-1" value=""></div>
+                        <div class="optionalParent">
+                            <div class="clear foot">
+                                <input type="submit" name="subscribe" id="mc-embedded-subscribe"
+                                    class="btn btn-outline-light rounded-0 border-gold mx-0 my-1">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </footer>
