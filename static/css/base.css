@@ -27,6 +27,10 @@ body {
     color: white;
 }
 
+.border-gold {
+    border: 1px solid #A99166 !important;
+}
+
 /* Navbar */
 .navbar-nav .nav-link {
     text-transform: uppercase;
@@ -265,12 +269,12 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-/* .bag-image {
+.bag-image {
     width: 100%;
     height: 10vw;
     object-fit: cover;
     min-height: 150px;
-} */
+}
 
 /* Chrome, Safari, Edge */
 input::-webkit-outer-spin-button,
@@ -327,12 +331,12 @@ input::-webkit-inner-spin-button {
 
 
 /* Messages */
-/* .message-container {
+.message-container {
     position: fixed;
     top: 72px;
     right: 15px;
     z-index: 99999999999;
-} */
+}
 
 .toast {
     -ms-flex-preferred-size: 350px;
@@ -347,8 +351,8 @@ input::-webkit-inner-spin-button {
     border-radius: .25rem;
     z-index: 99999999;
     position: fixed;
-    left: 70%;
-    top: 50%;
+    left: 60%;
+    top: 25%;
     transform: translate(82%, -54%);
 }
 
@@ -368,13 +372,14 @@ input::-webkit-inner-spin-button {
 
 /* footer */
 
-.footer {
+footer {
     background-color: #343434;
     color: white;
 }
 
-.bg-footer {
-    background-color: #343434;
+footer a:hover {
+    text-decoration: underline !important;
+    color: white;
 }
 
 footer a {
@@ -440,7 +445,6 @@ footer a:hover {
     .header-container {
         padding-top: 115px;
     }
-
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -452,9 +456,13 @@ footer a:hover {
     body {
         height: calc(100vh - 116px);
     }
+
+    .content {
+        min-height: calc(100vh - 264px);
+    }
     
     .logo-font {
-        font-size: 3rem;
+        font-size: 2rem;
         line-height: 75px;
     }
 
@@ -495,11 +503,10 @@ footer a:hover {
         padding: .25rem .5rem !important;
     }
 
-    social-networks i {
+    .social-networks i {
         font-size: 130%;
         padding-right: 10px;
     }
-
 }
 
 @media screen and (max-width: 767.98px) {
@@ -513,8 +520,8 @@ footer a:hover {
         font-size: 0.9rem;
     }
 
-    /* .bag-image {
+    .bag-image {
         height: 100%;
         max-height: 250px;
-    } */
+    }
 }
