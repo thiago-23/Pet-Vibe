@@ -8,6 +8,12 @@ The live link can be found here - [Pet Vibe](https://pet-vibe-368356973856.herok
 
 ![Site Mockup](docs/readme_images/mockup.png)
 
+- [Languages](#languages)
+- [Forking this repository](#forking-this-repository)
+- [Cloning this repository](#cloning-this-repository)
+- [Credits](#credits)
+- [Acknowledgments](#acknowledgments)
+
 
 
 ## Forking this repository
