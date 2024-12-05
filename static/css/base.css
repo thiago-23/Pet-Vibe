@@ -511,11 +511,11 @@ footer a:hover {
 
 @media screen and (max-width: 767.98px) {
     .home-text-container {
-        background-color: rgba(52, 52, 52, 0.5);
-        color: white;
+        background-color: rgba(254, 254, 254, 0.904);
+        color: rgb(13, 13, 13);
         padding: 1.5rem;
     }
-
+    
     .navbar-toggler {
         font-size: 0.9rem;
     }

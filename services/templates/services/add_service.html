@@ -15,16 +15,22 @@
 {% load crispy_forms_tags %}
 
 <div class="container">
-    <h1 class="text-center">Add New Service</h1>
-    <hr>
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center pt-4">Add New Service</h1>
+            <p class="text-center text-muted">Provide details about your new service below.</p>
+        </div>
+    </div>
     <br>
     <div class="row justify-content-center">
-        <div class="col-11 col-md-8 col-lg-6 mt-3 add-recipe-outer">
+        <div class="col-11 col-md-8 col-lg-6 mt-3">
             <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="btn gold-button">Add Service</button>
-                <a class="btn btn btn-outline-dark m-2" href="{%  url 'services' %}">Cancel</a>
+                {{ form | crispy }}
+                <div class="text-center mt-3">
+                    <button type="submit" class="btn btn-outline-dark border-gold rounded-0">Add Service</button>
+                    <a class="btn btn-outline-dark border-gold rounded-0 m-2" href="{% url 'services' %}">Cancel</a>
+                </div>
             </form>
         </div>
     </div>
