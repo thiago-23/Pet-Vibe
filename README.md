@@ -185,35 +185,82 @@ When you’re ready to place an order, your saved details will autofill the deli
 
 ![all products](/docs/readme_images/features%20/products.png)
 
+- The Product Listings page is designed to make shopping smooth and fun:
+
+- Each product card gives you the product’s image, title, a short description, and the price.
+- If you’re a superuser (like the site admin), you’ll also get handy Edit and Delete buttons at the bottom of each card to manage products directly.
+- The layout is fully responsive, meaning the number of products shown in a row adjusts automatically based on your screen size—perfect for desktop, tablet, or mobile browsing.
+- Need to find something specific? Use the Sort Box to organize products by price (low to high or high to low) or alphabetically (A-Z).
+
 ![sort](/docs/readme_images/features%20/sort_by.png)
 
 ### Product Detail
 
 ![Product Detail](/docs/readme_images/features%20/product_detail.png)
 
+- The Quantity Buttons are here to make adjusting your order super simple: Located right under the product details, these buttons let you tweak the number of items you want to add to your bag.
+- Use the plus (+) and minus (-) buttons to increase or decrease the quantity. The minus button is disabled if the value hits 1, and the plus button won’t let you go beyond 99—because let’s be real, 99 is plenty!
+- If you try to manually type in a number below 1 or over 99, clicking "Add to Bag" will pop up an error letting you know what’s allowed.
+- Hit Add to Bag to pop your selected quantity into your shopping bag. Clicking Keep Shopping will take you right back to the store so you can continue browsing.
 
 ### Product Management
 **Add Product**
 
 ![add product](/docs/readme_images/features%20/add_product.png)
 
+- The Add Product Page is a feature specifically for superusers to manage the product catalog:
+- Superusers can access this page through the 'Add Product' button, either on the Products page or via the Products Management option in the dropdown menu.
+- The SKU field is a stickler to be unique. Duplicate it, and the form won’t submit until you fix it.
+- Fields marked with an asterisk (*) are mandatory. Leave them blank or add whitespace, and you’ll see an error message guiding you to fix the issue.
+- Restricted Access: Non-superusers attempting to access this page (e.g., by modifying the URL) are redirected to a custom 403 Forbidden page.
+- Product Image: While uploading a photo is optional, skipping it means a default image will be used for your product.
+- Price Validation: If you go overboard and try adding a price with more than six digits, an error message will flag it.
+- Submission: Once all fields are valid, click 'Add Product' to add the item to your catalog. A friendly success message will confirm that product was successfully added.
+
 **Edit Product**
 
 ![edit product](/docs/readme_images/features%20/edit_product.png)
+
+- The Edit Product feature allows superusers to make changes to existing products.
+- Superusers can edit products by clicking the edit button on the product card or directly from the product detail page.
+- The edit form conveniently loads with all the current details of the product, saving time and reducing the risk of errors.
+- The current product image is displayed. If the image needs to be removed, a checkbox is available to revert the image to the default placeholder.
+- If a non-superuser attempts to edit a product (e.g., by manipulating the URL), they’re swiftly redirected to a custom 403 Forbidden page.
+- After making changes and submitting the form, the superuser receives a clear success message, confirming the product was updated successfully.
 
 **Delete Product**
 
 ![delete product](/docs/readme_images/features%20/delete_product.png)
 
+- The Delete Product feature empowers superusers to efficiently manage the product catalog.
+- Superusers can delete a product by clicking the delete button, available on both the product card and the product detail page.
+- Before deletion, a confirmation dialog appears, giving the superuser the option to proceed with the deletion or cancel it to prevent accidental removal.
+- Once a product is deleted, the superuser receives a clear success message, confirming the product was deleted successfully.
 
 ### Gromming Services
 
 ![Groominging Services](/docs/readme_images/features%20/grooming_services.png)
 
+- The Grooming Services page is designed to provide users with detailed information about available services.
+- Accessible through the navigation bar, ensuring users can find a display and comprehensive list of grooming services.
+    - Image: A visual representation of the service.
+    - Title: The name of the grooming service.
+    - Price: Pricing information for each service.
+    - Detailed Description: Additional details about sizesand what the service includes.
+- Next to each service, a "Contact Us" button is available, making it easy for users to inquire about specific services. Clicking the button redirects the user to the Contact Form.
+- If logged in as a superuser, edit and delete buttons are displayed alongside the service details, allowing for easy management of the grooming service offerings.
+
 ### Services Management
 **Add Service**
 
 ![Add Service](/docs/readme_images/features%20/add_service.png)
+
+- The Add Service functionality is available for superusers to easily manage grooming services.
+- The Add Service page is accessible via the 'Add Service' button on the Services page or from the dropdown menu under Services Management.
+- Only superusers can see and use these options. If a non-superuser tries to manually access the page (e.g., by modifying the URL), they are redirected to a custom 403 Forbidden page.
+- The form requires all fields marked with an asterisk (*) to be filled out. Leaving these blank or filling them with just whitespace will prompt error messages above the respective fields, guiding the user to fix the issue.
+- The option to upload a photo is available. If no photo is uploaded, a default image will be used.
+- Once all fields are completed correctly, clicking the 'Add Service' button will create the new service in the database and a success message confirms the service has been successfully added.
 
 
 **Edit Service**
@@ -229,19 +276,48 @@ When you’re ready to place an order, your saved details will autofill the deli
 
 ![shopping bag](/docs/readme_images/features%20/shopping_bag.png)
 
+- The Shopping Bag Page provides users with a detailed view of the items they've added to their cart.
+- Users can navigate to the Shopping Bag page by clicking the bag icon in the navigation bar. This page displays all items currently in the bag, along with their unit price, quantity, and subtotal.
+
+- The quantity input box shows the number of units of a product currently in the bag. Users can adjust the quantity using the plus (+) and minus (-) buttons.
+- The minus button is disabled when the quantity is set to 1 to prevent negative quantities.
+- The plus button is disabled when the quantity reaches 99 to maintain logical limits.
+
+- Clicking the update icon saves any changes made to the quantity and recalculates the subtotal for that product.
+- Clicking the remove button the item will be completely removed from the bag.
+- If a user enters an invalid quantity (e.g., a negative number or a number greater than 99) and clicks update, they’ll receive an error message explaining the valid range.
+- Entering a negative value and clicking update removes the item from the bag.
+
 ### Checkout 
 
 ![checkout](/docs/readme_images/features%20/checkout.png)
 
 **Details**
+- Users are prompted to provide their contact details, delivery address, and card number.
+- If shopping as a guest, users are shown a link to create an account or log in for a more personalized experience.
+- Signed-in users can check a box to save their delivery information for future use.
+- If delivery details are already saved, these fields (including email) are pre-filled to save time.
+- Any missing fields, whitespace-only inputs, or invalid data (e.g., text in the phone number field) trigger an error message prompting the user to correct the issue.
 
 **Order Summary**
+- Users are presented with a clear breakdown of their order, including: Item quantities, Subtotals and Grand total.
+- The order summary title includes the total number of items in the order.
+- Clicking on a product’s image in the summary redirects the user to that product’s detail page for further review.
 
 **Payment**
+- Payments are securely processed using Stripe, ensuring the user’s sensitive card information is handled safely.
+- Invalid card details (e.g., incorrect numbers) immediately trigger an error, preventing incomplete transactions.
+- While the payment is being processed, a loading screen ensures users don’t accidentally interrupt the process.
+- A warning message at the bottom of the page informs users of the exact amount that will be charged to their card.
+- If the payment form fails or the user navigates away during processing, a Stripe webhook ensures the order is still created in the database.
+- The webhook double-checks for existing order records and, if necessary, creates them using payment data.
 
 **Confirmation**
 
 ![order_confirmation](/docs/readme_images/features%20/confirmation.png)
+- After the payment is processed, users are redirected to a checkout success page, summarizing their completed order.
+- Users receive a confirmation email with their order details for future reference.
+- A ‘Keep Shopping’ button at the end of the summary takes users back to the Products page, encouraging further browsing.
 
 ### Testimonials
 
