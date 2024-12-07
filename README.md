@@ -79,23 +79,69 @@ The site uses a warm, welcoming palette inspired by nature, including greens, br
 
 **Logo**
 
+- Positioned at the top-left, linked to the home page, once click on the Pet Vibe logo it redirect to the home page for ease of navigation for the user.
+
 **Navigation Bar**
+
+- The Navigation bar includes links to key site areas like Products, Grooming, Testimonials and contact and it is visible at the top of every page.
 
 **Search Bar**
 
+![Search](/docs/readme_images/features%20/search.png)
+- The search bar is prominently positioned above the navigation bar for easy access.
+- Users can input keywords, and the search functionality dynamically scans product titles and descriptions, displaying matching results on the product listing page.
+- On smaller screens, the search bar transforms into a compact search icon. Clicking this icon reveals the full search bar in a dropdown format.
+
 **User Icon**
 
+![Logged In](/docs/readme_images/features%20/user_logged.png)
+
+- The User icon serves as a navigation link that opens a dropdown menu, providing quick access to account-related actions.
+- For visitors who are not logged in, the dropdown includes links to "Register" and "Log In," enabling account creation or authentication.
+- After successfully signing in, the dropdown menu dynamically updates, and replacing the "Register" and "Log In" options with a "Log Out" link for easy account management.
+- Additionally, the "My Profile" option becomes available in the dropdown menu, allowing users to quickly access and manage their personal account details.
+
+![AdminLogged In](/docs/readme_images/features%20/superuser_logged.png)
+
+- When a superuser logs in, the User icon dropdown menu dynamically expands to include additional management functionalities tailored for administrative purposes.
+- These options include: Product Management and Service Management.
+- This expanded functionality ensures that superusers have full control over the platform's content and user interactions, enhancing operational efficiency.
+
 **Bag Icon**
+
+![bag](/docs/readme_images/features%20/bag_icon.png)
+
+- The Bag Icon, positioned on the right side of the navigation bar beside the User icon, provides quick access to the user's shopping bag.
+- When a product is added to the bag:
+    - A badge displaying the total quantity of items is dynamically updated and the total appears at the button of the bag icon.
+    - A toast notification is triggered in the top-right corner of the screen, confirming the addition of the item.
+- The toast includes:
+    - A brief snapshot of the bag contents.
+    - The current total cost of the items in the bag.
+    - This feature enhances the shopping experience by providing real-time feedback and a convenient overview of the user's selections, streamlining the process from browsing to checkout.
 
 ### Home Page
 
 ![Home page](/docs/readme_images/features%20/home_page.png)
 
+- The Home Page of Pet Vibe greets users with a welcoming and engaging call-to-action section, designed to immediately capture attention and guide user interaction.
+
+- The central message, **"Welcome to Pet Vibe! Making Pets Shine, because they're worth it!"**, sets the tone for the site, emphasizing care, quality, and dedication to pets.
+- **Shop Now** Button: A prominently placed button encourages users to start exploring and purchasing products right away.
+- **Grooming** Services: Another actionable link directs users to view and explore available grooming services and prices.
+- This design ensures that the homepage serves as both a welcoming introduction to Pet Vibe and a functional starting point for users to quickly access the site's key offerings
 
 ### Footer
 
 ![footer](/docs/readme_images/features%20/footer.png)
 
+- The footer is a consistent element located at the bottom of every page, providing users with easy access to additional features and navigation options.
+
+- Features of the Footer:
+    - Social Media Links: Direct links to Facebook, Instagram and Twitter allow users to connect with the platform's social media presence.
+    - Newsletter Signup: A Mailchimp-powered subscription form enables users to enter their email address to subscribe to a monthly newsletter, keeping them updated on new products, services, and offers.
+    - Quick Links Section: Provides convenient navigation to essential site pages like Contact Us and Privacy Policy.
+- External Link Behavior: All external links are designed to open in a new tab, ensuring users remain engaged with the website while exploring additional content.
 
 ### User Account Pages
 
@@ -111,14 +157,29 @@ The site uses a warm, welcoming palette inspired by nature, including greens, br
 
 ![Sign Up](/docs/readme_images/features%20/sign_out.png)
 
+- Pet Vibe makes managing your account super simple and secure with Django Allauth powering the system. Here’s how it works:
+
+- Sign Up, Log In, and Log Out: Creating an account is quick and easy. Once you're in, you can log in and out anytime you want without hassle.
+- Clear Success Messages: Every time you log in or out, you’ll see a quick confirmation message so you know it worked.
+- Email Verification: To keep everything secure, you’ll get an email when you sign up. Just click the link in that email to activate your account.
+- Forgot Your Password? No Problem! If you ever forget your password, there’s a "Forgot Password" link on the login page. Just click it, and you’ll get an email to reset your password in no time.
+- It’s all about making it easy for you to manage your account while keeping your info safe and secure. 😊
+
 ### Profile
 **Delivery Details**
 
 ![Delivery Details](/docs/readme_images/features%20/delivery_info.png)
 
+- The Delivery Details section in your profile keeps your delivery address and phone number saved securely, so you don’t have to type them out every time.
+When you’re ready to place an order, your saved details will autofill the delivery form—making the checkout process quick and ease.
+
 **Order History**
 
 ![Order History](/docs/readme_images/features%20/order_history.png)
+
+- The Order History section keeps track of all your past orders in one list.
+- You’ll see details like the order number, the date you placed it, and the total amount.
+- If you Want to check something specific? Click on the order number, and it’ll take you to a full summary page with all the details about that order.
 
 ### Products
 
@@ -145,6 +206,67 @@ The site uses a warm, welcoming palette inspired by nature, including greens, br
 ![delete product](/docs/readme_images/features%20/delete_product.png)
 
 
+### Gromming Services
+
+![Groominging Services](/docs/readme_images/features%20/grooming_services.png)
+
+### Services Management
+**Add Service**
+
+![Add Service](/docs/readme_images/features%20/add_service.png)
+
+
+**Edit Service**
+
+![edit Service]
+
+**Delete Service**
+
+![Delete Service]
+
+
+### Bag
+
+![shopping bag](/docs/readme_images/features%20/shopping_bag.png)
+
+### Checkout 
+
+![checkout](/docs/readme_images/features%20/checkout.png)
+
+**Details**
+
+**Order Summary**
+
+**Payment**
+
+**Confirmation**
+
+![order_confirmation](/docs/readme_images/features%20/confirmation.png)
+
+### Testimonials
+
+![Testimonials](/docs/readme_images/features%20/testimonials.png)
+
+**Add Testimonial**
+
+![Add Testimonial](/docs/readme_images/features%20/add_testimonial.png)
+
+**Edit Testimonial**
+
+![Edit Testimonial](/docs/readme_images/features%20/edit_testimonial.png)
+
+**Delete Testimonial**
+
+![Delete Testimonial](/docs/readme_images/features%20/delete_testimonial.png)
+
+### Error Pages
+
+![403 error](/docs/readme_images/features%20/403_error.png)
+
+- 400 Bad Request - Pet Vibe is unable to handle this request.
+- 403 Page Forbidden - Looks like you're trying to access forbidden content. Please log out and sign in to the correct account.
+- 404 Page Not Found - The page you're looking for doesn't exist.
+- 500 Server Error - Due to an internal error we are unable to process this request.
 
 
 ## Languages
