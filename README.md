@@ -12,6 +12,7 @@ The live link can be found here - [Pet Vibe](https://pet-vibe-368356973856.herok
     * [User Stories](#user-stories)
     * [Design](#design)
         + [Colour Scheme](#colour-scheme)
+- [Agile Methodology](#agile-methodology)
 - [Languages](#languages)
 - [Deployment - Heroku](#deployment---heroku)
 - [AWS Set Up](#aws-set-up)
@@ -58,11 +59,20 @@ Pet Vibe is designed with a user-centric approach, ensuring ease of navigation, 
 - As a site user, I can submit a testimonial after purchasing a product or service so that I can provide feedback.
 - As a site user, I can submit a contact form so that I can inquire about products or services.
 
+## Agile Methodology
+GitHub Projects was used to manage the development process of the Pet Vibe project, following an Agile approach. This ensured that the project was developed incrementally, with flexibility to adapt to changing requirements and priorities. The project board can be accessed [here](https://github.com/users/thiago-23/projects/15)
+
+### Epics and User Stories
+
+The development process was structured around the 5 main Epics, each representing a significant aspect of the project. These Epics were broken down into smaller, actionable User Stories, allowing for focused and efficient development
+
 ### Design
 
 The site uses a warm, welcoming palette inspired by nature, including greens, browns, and neutral tones to evoke trust and comfort.
 
 #### Colour Scheme
+
+![Colour Scheme](docs/readme_images/colour_scheme.png)
 
 ## Languages
 
@@ -125,8 +135,8 @@ Add the following Config Vars in Heroku:
 
 |     Variable name     |                           Value/where to find value                           |
 |:---------------------:|:-----------------------------------------------------------------------------:|
-| AWS_ACCESS_KEY_ID     | AWS CSV file(instructions below)                                               |
-| AWS_SECRET_ACCESS_KEY | AWS CSV file(instructions below)                                               |
+| AWS_ACCESS_KEY_ID     | AWS CSV file(instructions below)                                              |
+| AWS_SECRET_ACCESS_KEY | AWS CSV file(instructions below)                                              |
 | DATABASE_URL          | Postgres generated (as per step above)                                        |
 | EMAIL_HOST_PASS       | Password from email client                                                    |
 | EMAIL_HOST_USER       | Site's email address                                                          |
