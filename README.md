@@ -352,6 +352,11 @@ When you’re ready to place an order, your saved details will autofill the deli
 - CSS3
 - Javascript
 
+
+### Social Media Marketing 
+
+![Facebook Page](/docs/readme_images/facebook.png)
+
 ## Deployment - Heroku
 
 To deploy this page to Heroku from its GitHub repository, the following steps were taken:
