@@ -74,6 +74,79 @@ The site uses a warm, welcoming palette inspired by nature, including greens, br
 
 ![Colour Scheme](docs/readme_images/colour_scheme.png)
 
+### Header
+![header](/docs/readme_images/features%20/header.png)
+
+**Logo**
+
+**Navigation Bar**
+
+**Search Bar**
+
+**User Icon**
+
+**Bag Icon**
+
+### Home Page
+
+![Home page](/docs/readme_images/features%20/home_page.png)
+
+
+### Footer
+
+![footer](/docs/readme_images/features%20/footer.png)
+
+
+### User Account Pages
+
+**Sign Up**
+
+![Sign Up](/docs/readme_images/features%20/sign_up.png)
+
+**Sign In**
+
+![Sign Up](/docs/readme_images/features%20/sign_in.png)
+
+**Log Out**
+
+![Sign Up](/docs/readme_images/features%20/sign_out.png)
+
+### Profile
+**Delivery Details**
+
+![Delivery Details](/docs/readme_images/features%20/delivery_info.png)
+
+**Order History**
+
+![Order History](/docs/readme_images/features%20/order_history.png)
+
+### Products
+
+![all products](/docs/readme_images/features%20/products.png)
+
+![sort](/docs/readme_images/features%20/sort_by.png)
+
+### Product Detail
+
+![Product Detail](/docs/readme_images/features%20/product_detail.png)
+
+
+### Product Management
+**Add Product**
+
+![add product](/docs/readme_images/features%20/add_product.png)
+
+**Edit Product**
+
+![edit product](/docs/readme_images/features%20/edit_product.png)
+
+**Delete Product**
+
+![delete product](/docs/readme_images/features%20/delete_product.png)
+
+
+
+
 ## Languages
 
 - Python
