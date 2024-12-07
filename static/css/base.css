@@ -195,6 +195,26 @@ body {
     color: #A99166;
 }
 
+/* Service Cards */
+
+.alt-colour {
+    background: white;
+}
+
+.alt-colour:nth-child(odd) {
+    background: #f6f6f6;
+}
+
+.service-img {
+    width: 100%; 
+    max-width: 300px; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    display: block; 
+    margin: 0 auto; 
+}
+
 /* Product Detail */
 .product-detail-image {
     width: 100%;
@@ -362,6 +382,12 @@ input::-webkit-inner-spin-button {
 
 .toast-capper {
     height: 2px;
+}
+
+.toast-show {
+    display: contents;
+    opacity: 1;
+
 }
 
 .bag-notification-wrapper {
