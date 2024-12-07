@@ -7,7 +7,9 @@ from .models import GroomingService, Testimonial
 from .forms import GroomingServiceForm, TestimonialForm, TestimonialUpdateForm
 from django.views import generic
 from django.shortcuts import redirect
+import logging
 
+logger = logging.getLogger(__name__)
 
 class GroomingServiceListView(ListView):
     """
@@ -88,6 +90,7 @@ class AddTestimonialView(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('testimonials')
 
     def form_valid(self, form):
+        form.instance.email = self.request.user.email
         messages.success(self.request, "Your testimonial has been submitted for approval.")
         return super().form_valid(form)
 
@@ -102,11 +105,23 @@ class EditTestimonialView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def test_func(self):
         testimonial = self.get_object()
-        return self.request.user.email == testimonial.email
+
+        # Ensure the user is logged in and has an email
+        if not self.request.user.is_authenticated or not self.request.user.email:
+            logger.warning("User is not authenticated or email is missing.")
+            return False
+
+        # Compare the user's email with the testimonial's email
+        if testimonial.email and self.request.user.email == testimonial.email:
+            return True
+
+        logger.warning("Email mismatch or testimonial email is missing.")
+        return False
 
     def form_valid(self, form):
         messages.success(self.request, "Your testimonial has been updated.")
         return super().form_valid(form)
+
 
 
 class DeleteTestimonialView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):

@@ -15,18 +15,20 @@ class GroomingServiceForm(forms.ModelForm):
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-gold'
 
+
 class TestimonialForm(forms.ModelForm):
     """
     Form for customers to submit testimonials.
     """
     class Meta:
         model = Testimonial
-        fields = '__all__'
-    
+        fields = ['name', 'service', 'body']  # Exclude is_approved
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-gold'
+
 
 class TestimonialUpdateForm(forms.ModelForm):
     """
@@ -34,8 +36,8 @@ class TestimonialUpdateForm(forms.ModelForm):
     """
     class Meta:
         model = Testimonial
-        fields = ['body']
-    
+        fields = ['body']  # Only allow editing the body
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         for field_name, field in self.fields.items():

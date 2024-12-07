@@ -359,35 +359,29 @@ input::-webkit-inner-spin-button {
 }
 
 .toast {
-    -ms-flex-preferred-size: 350px;
-    flex-basis: 350px;
     max-width: 350px;
-    font-size: .875rem;
-    background-color: rgba(255, 255, 255, .85);
-    background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, .1);
-    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .1);
-    opacity: 0;
-    border-radius: .25rem;
-    z-index: 99999999;
+    font-size: 0.875rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 0.25rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    opacity: 0; 
+    z-index: 9999; 
     position: fixed;
-    left: 60%;
-    top: 25%;
-    transform: translate(82%, -54%);
+    top: 72px; 
+    right: 15px; 
+    transform: translateX(100%); 
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+}
+
+.toast.show {
+    display: contents;
+    opacity: 1; 
+    transform: translateX(0); 
 }
 
 .custom-toast {
     overflow: visible;
-}
-
-.toast-capper {
-    height: 2px;
-}
-
-.toast-show {
-    display: contents;
-    opacity: 1;
-
 }
 
 .bag-notification-wrapper {
