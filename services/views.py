@@ -66,7 +66,7 @@ class DeleteServiceView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, "Service deleted successfully.")
-        return super().delete(request, *args, **kwarg)
+        return super().delete(request, *args, **kwargs)
 
 class TestimonialListView(ListView):
     """
