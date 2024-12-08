@@ -398,6 +398,51 @@ When you’re ready to place an order, your saved details will autofill the deli
 - 404 Page Not Found - The page you're looking for doesn't exist.
 - 500 Server Error - Due to an internal error we are unable to process this request.
 
+## Validator Testing
+
+### HTML
+All HTML pages were run through the [W3C HTML Validator](https://validator.w3.org/).
+
+
+### CSS
+
+
+### JSHINT
+
+
+### Lighthouse
+
+Lighthouse was user to validate all pages for accessibility and performance. During the process, fixed several issues, such as improving the contrast between background and text colors. After making these adjustments, the site achieved the following scores:
+
+| Page                           | Performance  | Accessibility | Best Practices  | SEO |
+|--------------------------------|:------------:|:-------------:|:---------------:|:---:|
+|                                |              |               |                 |     |
+| Desktop                        |              |               |                 |     |
+| Home                           |           96 |            86 |             100 | 100 |
+| Products                       |           94 |            82 |             100 |  91 |
+| Product Detail                 |           96 |            82 |             100 | 100 |
+| Add Product                    |           95 |            85 |             100 | 100 |
+| Edit Product                   |           97 |            85 |             100 | 100 |
+| Delete Product                 |           97 |            85 |             100 | 100 |
+| Bag                            |           96 |            85 |             100 | 100 |
+| Checkout                       |           92 |            82 |             100 |  91 |
+| Profile                        |           96 |            85 |             100 | 100 |
+| Order History                  |           96 |            85 |             100 | 100 |
+| Gromming Services              |           94 |            86 |             100 | 100 |
+| Add Gromming Service           |           95 |            85 |             100 | 100 |
+| Edit Gromming Service          |           96 |            85 |             100 | 100 |
+| Delete Gromming Service        |           96 |            85 |             100 | 100 |
+| Testimonials                   |           95 |            85 |             100 | 100 |
+| Add Testimonial                |           96 |            85 |             100 | 100 |
+| Edit Testimonial               |           96 |            85 |             100 | 100 |
+| Delete Testimonial             |           96 |            85 |             100 | 100 |
+| Contact                        |           96 |            85 |             100 | 100 |
+| Sign In                        |           95 |            85 |             100 | 100 |
+| Sign Up                        |           96 |            85 |             100 | 100 |
+| Log Out                        |           96 |            86 |             100 | 100 |
+| Password Reset                 |           98 |            85 |             100 | 100 |
+
+
 ## Languages
 
 - Python
