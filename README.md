@@ -10,10 +10,29 @@ The live link can be found here - [Pet Vibe](https://pet-vibe-368356973856.herok
 
 - [User Experience (UX)](#user-experience--ux-)
     * [User Stories](#user-stories)
+- [Agile Methodology](#agile-methodology)
     * [Design](#design)
         + [Colour Scheme](#colour-scheme)
-- [Agile Methodology](#agile-methodology)
+- [Features](#features)
+    * [Header](#header)
+    * [Home Page](#home-page)
+    * [Footer](#footer)
+    * [User Account Pages](#user-account-pages)
+    * [Profile](#profile)
+    * [Products](#products)
+    * [Product Detail](#product-detail)
+    * [Gromming Services](#gromming-services)
+    * [Services management](#services-management)
+    * [Bag](#bag)
+    * [Checkout](#checkout)
+    * [Testimonials](#testimonials)
+    * [Error Pages](#error-pages)
 - [Languages](#languages)
+- [Business Model](#business-model)
+- [Marketing Strategy ](#marketing-strategy)
+    * [SEO ](#seo)
+    * [Email marketing](#email-marketing)
+    * [Social media Marketing](#social-media-marketing)
 - [Deployment - Heroku](#deployment---heroku)
 - [AWS Set Up](#aws-set-up)
 - [Forking this repository](#forking-this-repository)
@@ -73,6 +92,8 @@ The site uses a warm, welcoming palette inspired by nature, including greens, br
 #### Colour Scheme
 
 ![Colour Scheme](docs/readme_images/colour_scheme.png)
+
+## Features
 
 ### Header
 ![header](/docs/readme_images/features%20/header.png)
@@ -262,15 +283,14 @@ When you’re ready to place an order, your saved details will autofill the deli
 - The option to upload a photo is available. If no photo is uploaded, a default image will be used.
 - Once all fields are completed correctly, clicking the 'Add Service' button will create the new service in the database and a success message confirms the service has been successfully added.
 
-
-**Edit Service**
-
-![edit Service]
-
 **Delete Service**
 
-![Delete Service]
+![Delete Service](/docs/readme_images/features%20/delete_services.png)
 
+- Superusers are equipped with the ability to manage and delete services directly from the Services Page.
+- Superusers can click the delete button located beside the description of any service on the Services Page.
+- Before deletion, the system prompts the superuser with a confirmation dialog to verify their intent. They can either confirm the deletion or cancel the action.
+- After successfully deleting a service, a success message appears, confirming that the service has been removed from the platform.
 
 ### Bag
 
@@ -322,18 +342,44 @@ When you’re ready to place an order, your saved details will autofill the deli
 ### Testimonials
 
 ![Testimonials](/docs/readme_images/features%20/testimonials.png)
+- The Testimonials Page is an engaging feature that helps build trust and credibility for Pet Vibe by showcasing feedback from previous clients.
+- The page can be accessed through the navigation bar link, making it simple for users to find and view customer reviews.
+- Upon navigating to the page, users can view all the testimonials shared by previous clients, organized for easy browsing.
+- Each testimonial highlights: The Service it relates to, so potential clients know which service the feedback is about.
+- The name of the user who left the feedback, personalizing the testimonials.
+- This page enhances user confidence by providing authentic experiences shared by others, showcasing the quality and reliability of services offered by Pet Vibe.
 
 **Add Testimonial**
 
 ![Add Testimonial](/docs/readme_images/features%20/add_testimonial.png)
 
+- The Add Testimonial feature allows users to share their experiences and provide feedback about the services they’ve received.
+- Logged-in users can click the "Add Testimonial" button on the Testimonials page to open a simple, user-friendly form where they can submit their feedback.
+- The form ensures that sharing a testimonial is quick and straightforward.
+- If a user isn’t logged in, attempting to add a testimonial redirects them to the login page, ensuring only authenticated users can contribute feedback.
+- After submission, the testimonial is automatically associated with the user's username, and a message informs the user that their testimonial is awaiting admin approval. This ensures that only appropriate and constructive testimonials appear publicly.
+
 **Edit Testimonial**
 
 ![Edit Testimonial](/docs/readme_images/features%20/edit_testimonial.png)
 
+- The Edit Testimonial feature provides users with the ability to update their feedback while ensuring security and proper access control. 
+- Users can edit their own testimonials directly by clicking the edit button under their testimonial on the Testimonials Page.
+- The edit form displays the existing testimonial text, making it easy for users to make modifications without starting from scratch.
+- Attempts to edit another user’s testimonial via URL manipulation will trigger a custom 403 error page, ensuring testimonials can only be modified by their authors.
+- Superusers have the ability to edit any testimonial, enabling them to moderate and maintain content integrity.
+- After successfully editing a testimonial, users receive a confirmation message informing them that the update was successful.
+
 **Delete Testimonial**
 
 ![Delete Testimonial](/docs/readme_images/features%20/delete_testimonial.png)
+
+- The Delete Testimonial feature provides users with the ability to remove their own feedback while ensuring that proper access controls are in place.
+- Users can delete their own testimonials by clicking the delete button located under their testimonial on the Testimonials Page.
+- Upon clicking the delete button, users are presented with a confirmation dialog to ensure they want to proceed. They can confirm or cancel their action.
+- After a testimonial is deleted, users receive a success message confirming that the deletion was successful.
+- If a user attempts to delete another user's testimonial via URL manipulation, they encounter a custom 403 error page, ensuring testimonials are only managed by their authors.
+- Superusers have the authority to delete any testimonial, allowing them to moderate and manage inappropriate or unwanted content.
 
 ### Error Pages
 
@@ -352,8 +398,35 @@ When you’re ready to place an order, your saved details will autofill the deli
 - CSS3
 - Javascript
 
+## Business Model
+
+- Pet Vibe operates with a Business-to-Consumer (B2C) model. The platform provides direct access to high-quality pet grooming services and premium pet care products for pet owners. A typical customer of Pet Vibe is a devoted pet owner who wants the best for their furry friends, whether it’s professional grooming or the latest in pet care essentials.
+
+## Marketing Strategy
+
+- To boost visibility and engagement, Pet Vibe uses a mix of smart marketing strategies, including SEO, content marketing, social media, and email marketing.
+
+### SEO
+Several SEO techniques were put in place to ensure Pet Vibe ranks high on search engines, making it easier for users to discover the platform:
+
+**Keywords**
+Focused on a combination of short-tail and long-tail keywords that align with the needs of pet owners. Research involved analyzing competitors and tools like WordTracker. Keywords like "premium pet grooming," "quality pet products," and "happy pets" are incorporated into meta tags, page titles, headings, and even <strong> tags to boost relevance.
+
+Meta descriptions and keywords in the HTML header.
+Strategically placed in headings, text content, and alt tags for images.
+Highlighted in links to improve click-through rates.
+
+**Sitemap and robots.txt**
+A sitemap ensures search engines can easily crawl the website, while a well-configured robots.txt file blocks unimportant sections to improve overall SEO performance.
+
+**External Links** 
+In the footer, we included links improve credibility and SEO ranking. Search engines see these links as indicators of high-quality conten
+
+### Email Marketing
+Pet Vibe’s email marketing strategy focuses on keeping customers informed. There’s a newsletter signup form in the footer powered by Mailchimp, so even casual visitors can stay connected. This approach keeps the audience engaged and loyal over time.
 
 ### Social Media Marketing 
+A dedicated Facebook business page connects with pet lovers directly. It features a regular updates about new products and grooming services. This organic engagement builds a community and encourages repeat visits to the site.
 
 ![Facebook Page](/docs/readme_images/facebook.png)
 
@@ -571,6 +644,39 @@ To clone this repository follow the below steps:
 5. Type **'git clone'**, and then paste the URL copied from GitHub earlier. 
 6. Type **'Enter'** to create the local clone. 
 
+## Frameworks - Libraries - Programs Used
+
+- [Lucidchart](https://lucid.app/documents#/dashboard) - For creating the database schema design.
+- [Coolors](https://coolors.co/) - Used to create the site’s color palette.
+- [Jshint](https://jshint.com/) - Validated all the JavaScript code.
+- [W3C](https://www.w3.org/) - Ensured the HTML and CSS followed web standards.
+- [Google Fonts](https://fonts.google.com/) - Brought beautiful fonts into the project.
+- [Font Awesome](https://fontawesome.com/) - Added icons for the information bar and buttons.
+- [Mailchimp](https://mailchimp.com/?currency=EUR) - Enabled the newsletter signup feature.
+- [Privacy Policy Generator](https://www.privacypolicygenerator.info/) - Used to Quickly created the site’s privacy policy.
+- [Sitemap Generator](www.xml-sitemaps.com) - Used to generate the sitemap.xml file.
+- [Tables Generator](https://www.tablesgenerator.com/markdown_tables) - Turned Excel testing tables into markdown format.
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - used to Simplified Django form styling.
+- [AM I resposive](https://ui.dev/amiresponsive?) - Generated the site mockup images.
+- [Favicon](https://favicon.io/) - Greated the site’s favicon.
+- [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - Used to help test responsiveness and improve performance.
+- [Heroku](https://dashboard.heroku.com/login) - Used to deploy the project on a cloud-based platform.
+- [Django](https://www.djangoproject.com/) - The main Python framework behind the project.
+- [Django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html) - Managed user authentication and account features.
+- [JQuery](https://jquery.com/) - Made interactive elements simpler to code.
+- [PostgreSQL](https://www.postgresql.org/) - Hosted the production database.
+- [SQLite](https://www.sqlite.org/index.html) - Used as the database during development.
+- [Stripe](https://stripe.com/ie) - used for power the secure payment system
+- [AWS](https://aws.amazon.com/?nc2=h_lg) - Stored and managed static and media files.
+
 ## Credits
 
+- [Code Institute - Boutique Ado Walkthrough Project](https://github.com/Code-Institute-Solutions/boutique_ado_v1)
+- [Stack Overflow](https://stackoverflow.com/)
+- [Django Docs](https://docs.djangoproject.com/en/5.1/)
+- [Bootstrap 4.6 Docs](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+- [Pexels](https://www.pexels.com/):
+
 ## Acknowledgments
+
+ I want to express my gratitude to The Code Institute Slack community for their quick responses, constructive feedback, and unwavering encouragement, which helped me overcome challenges and improve the project along the way.
