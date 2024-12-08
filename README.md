@@ -11,6 +11,8 @@ The live link can be found here - [Pet Vibe](https://pet-vibe-368356973856.herok
 - [User Experience (UX)](#user-experience--ux-)
     * [User Stories](#user-stories)
 - [Agile Methodology](#agile-methodology)
+- [Agile Methodology](#agile-methodology)
+- [Database Schema](#database-schema)
     * [Design](#design)
         + [Colour Scheme](#colour-scheme)
 - [Features](#features)
@@ -39,7 +41,6 @@ The live link can be found here - [Pet Vibe](https://pet-vibe-368356973856.herok
 - [Cloning this repository](#cloning-this-repository)
 - [Credits](#credits)
 - [Acknowledgments](#acknowledgments)
-
 
 ## User Experience (UX)
 
@@ -80,6 +81,14 @@ Pet Vibe is designed with a user-centric approach, ensuring ease of navigation, 
 
 ## Agile Methodology
 GitHub Projects was used to manage the development process of the Pet Vibe project, following an Agile approach. This ensured that the project was developed incrementally, with flexibility to adapt to changing requirements and priorities. The project board can be accessed [here](https://github.com/users/thiago-23/projects/15)
+
+## Database Schema
+
+The database schema is designed to efficiently manage data for various functionalities, including user accounts, product details, grooming services, orders, and testimonials. 
+During development, SQLite was used for its simplicity. For production, the database was migrated to PostgreSQL on Heroku.
+Below is a diagram showing how the tables relate to one another:
+
+![Database Schema](/docs/readme_images/data_base.png)
 
 ### Epics and User Stories
 
@@ -207,7 +216,6 @@ When you’re ready to place an order, your saved details will autofill the deli
 ![all products](/docs/readme_images/features%20/products.png)
 
 - The Product Listings page is designed to make shopping smooth and fun:
-
 - Each product card gives you the product’s image, title, a short description, and the price.
 - If you’re a superuser (like the site admin), you’ll also get handy Edit and Delete buttons at the bottom of each card to manage products directly.
 - The layout is fully responsive, meaning the number of products shown in a row adjusts automatically based on your screen size—perfect for desktop, tablet, or mobile browsing.
@@ -390,7 +398,6 @@ When you’re ready to place an order, your saved details will autofill the deli
 - 404 Page Not Found - The page you're looking for doesn't exist.
 - 500 Server Error - Due to an internal error we are unable to process this request.
 
-
 ## Languages
 
 - Python
@@ -472,7 +479,6 @@ DATABASES = {
             }
     }
 ```
-
 - Create requirements.txt file by typing `pip3 freeze --local > requirements.txt`
 - Create a file named "Procfile" in the main directory and add the following: `web: gunicorn project-name.wsgi:application`
 - Add Heroku to the ALLOWED_HOSTS list in settings.py in the format ['app_name.heroku.com', 'localhost']
@@ -502,7 +508,6 @@ Add the following Config Vars in Heroku:
 - Click View to view the deployed site.
 
 The site is now live and operational.
-
 
 ## AWS Set Up
 ### AWS S3 Bucket
@@ -544,7 +549,6 @@ The site is now live and operational.
 - Add '/*' at the end of the 'Resource' key, and save.
 - Go to the 'Access Control List' section click edit and enable List for Everyone (public access) and accept the warning box.
 
-
 ### IAM
 - From the 'Services' menu, search IAM and select it.
 - Once on the IAM page, click 'User Groups' from the side bar, then click 'Create group'. Choose a name and click 'Create'.
@@ -568,7 +572,6 @@ The site is now live and operational.
 - Click 'Next' and select the group you created.
 - Keep clicking 'Next' until you reach the 'Create user' button and click that.
 - Download the CSV file which contains the AWS_SECRET_ACCESS_KEY and your AWS_ACCESS_KEY_ID needed in the Heroku variables as per above list and also in your env.py.
-
 
 ### Connecting S3 to Django 
 - Go back to your IDE and install 2 more requirements:
@@ -679,4 +682,4 @@ To clone this repository follow the below steps:
 
 ## Acknowledgments
 
- I want to express my gratitude to The Code Institute Slack community for their quick responses, constructive feedback, and unwavering encouragement, which helped me overcome challenges and improve the project along the way.
+I want to express my gratitude to The Code Institute Slack community for their quick responses, constructive feedback, and unwavering encouragement, which helped me overcome challenges and improve the project along the way.
