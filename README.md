@@ -39,6 +39,7 @@ The live link can be found here - [Pet Vibe](https://pet-vibe-368356973856.herok
     * [SEO ](#seo)
     * [Email marketing](#email-marketing)
     * [Social media Marketing](#social-media-marketing)
+- [Fixed Bugs](#fixed-bugs)
 - [Deployment - Heroku](#deployment---heroku)
 - [AWS Set Up](#aws-set-up)
 - [Forking this repository](#forking-this-repository)
@@ -518,6 +519,31 @@ Pet Vibe’s email marketing strategy focuses on keeping customers informed. The
 A dedicated Facebook business page connects with pet lovers directly. It features a regular updates about new products and grooming services. This organic engagement builds a community and encourages repeat visits to the site.
 
 ![Facebook Page](/docs/readme_images/facebook.png)
+
+## Fixed Bugs 
+
+**Email Confirmation Issue During Deployment**
+
+- **Bug Description:** During deployment, the project failed to send email verification links to users after they signed up, preventing them from completing the registration process.
+
+- **Solution:** After researching the issue on Slack and contacting student support, it was identified that the deployment environment was missing compatibility with the required Python version. The solution involved:
+    * Creating a file named runtime.txt in the root directory of the project.
+    * Adding the line python-3.10.14 to specify the correct Python version.
+    * Deploying the updated configuration and testing the email functionality.
+- **Outcome:** The issue was successfully resolved. Users can now register and receive email verification links without any problems.
+
+**Unfixed Bugs**
+
+**Page Rendering Issue After User Actions**
+
+- **Bug Description:** After performing certain actions like logging in, logging out, or adding a product to the cart, the page rendering occasionally breaks. This results in the page content appearing misaligned or distorted. However, refreshing the page restores the expected layout and functionality.
+
+- **Attempted Solutions:**
+    * Debugged the issue to check for potential problems with JavaScript, but no errors were flagged in the console.
+    * Reviewed the Django views and templates to ensure that the context was being passed correctly.
+    * Attempted to replicate the issue in different browsers and devices to identify the pattern but couldn't pinpoint the root cause.
+
+**Next Steps:** Unfortunately, this issue remains unresolved due to time constraints. Efforts to resolve the issue included seeking help from the project mentor during the last session, but the mentor was unavailable and didn't show up on my last session. Further debugging and testing are required to identify and fix the root cause of this bug.
 
 ## Deployment - Heroku
 
