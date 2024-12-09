@@ -1,4 +1,4 @@
-<form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}"></form>
+<form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
     {% csrf_token %}
     <div class="form-group mx-md-4 mx-lg-5">
         <div class="input-group input-group-{{ item.item_id }}">
@@ -13,7 +13,7 @@
                 type="number" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" aria-label="Quantity">
             <div class="input-group-append">
                 <button
-                    class="increase-qty btn btn-sm  border-gold rounded-0 increase-qty_{{ item.item_id }}"
+                    class="increase-qty btn btn-sm  border-gold btn-outline-dark rounded-0 increase-qty_{{ item.item_id }}"
                     data-item_id="{{ item.item_id }}" aria-label="Increase Quantity">
                     <span><i class="fas fa-plus fa-sm"></i></span>
                 </button>

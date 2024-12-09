@@ -43,7 +43,7 @@
        var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
        var currentValue = parseInt($(closestInput).val());
        $(closestInput).val(currentValue - 1);
-       var updatedValue = parseInt($(closestInput).val())
+       var updatedValue = parseInt($(closestInput).val());
        var itemId = $(this).data('item_id');
        handleEnableDisable(itemId); 
 
@@ -55,7 +55,7 @@
     // update bag automatically
     function updateBag(item_id, quantity) {
         var csrfToken = "{{ csrf_token }}";
-        var url = `/bag/adjust/${item_id}/`
+        var url = `/bag/adjust/${item_id}/`;
         var data = {
             'csrfmiddlewaretoken': csrfToken,
             'quantity': quantity,
@@ -65,5 +65,5 @@
             .done(function () {
                 location.reload();
         });
-    };
+    }
 </script>
