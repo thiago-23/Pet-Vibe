@@ -405,9 +405,42 @@ All HTML pages were run through the [W3C HTML Validator](https://validator.w3.or
 
 
 ### CSS
+All CSS files were tested using the official [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input). The validator confirmed that the stylesheets are error-free, ensuring that the CSS adheres to web standards and best practices for styling.
 
+*base.css* 
+
+![base.ccs validation](/docs/readme_images/base_css.png)
+
+*profile.css*
+
+![profile.ccs validation](/docs/readme_images/profile_css.png)
+
+*checkout.css*
+
+![checkout.ccs validation](/docs/readme_images/checkout_css.png)
 
 ### JSHINT
+All JavaScript used in the project was validated using [JSHint](https://jshint.com/). This tool checks for potential issues in the code and ensures compliance with best practices. After passing the scripts through JSHint, no issues were identified, confirming that the JavaScript in the project is clean and adheres to coding standards.
+
+**Profile**
+
+![profile JS validation](/docs/readme_images/js_validator%20/profile_js.png)
+
+**Checkout**
+
+![Checkout JS validation](/docs/readme_images/js_validator%20/checkout_js.png)
+
+**Bag**
+
+![Bag JS validation](/docs/readme_images/js_validator%20/bag_js.png)
+
+**Quantity Input**
+
+![Quantity Input JS validation](/docs/readme_images/js_validator%20/quantity_input_js.png)
+
+**Products**
+
+![products.html JS validation](/docs/readme_images/js_validator%20/products_js.png)
 
 
 ### Lighthouse
